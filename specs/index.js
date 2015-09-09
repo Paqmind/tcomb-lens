@@ -5,12 +5,9 @@ import Lens from "../src/index";
 
 let expect = Chai.expect;
 
-//let Lens = require("../src/index");
-
-// expect(isImmutable(Tc.Any)).eql(true); ???
-
 describe("isImmutable()", function () {
   it("should know immutable types", function () {
+    expect(isImmutable(Tc.Any)).eql(true);
     expect(isImmutable(Tc.Array)).eql(true);
     expect(isImmutable(Tc.Boolean)).eql(true);
     expect(isImmutable(Tc.Date)).eql(true);
