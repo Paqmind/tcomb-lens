@@ -8,14 +8,13 @@ function createGetter(key) {
       if (isImmutable(data)) {
         throw new Error(`can't get key ${inspect(key)} from immutable data ${inspect(data)}`);
       } else {
-        if (data.meta.kind == "dict") {
+        if (data.meta && data.meta.kind == "dict") {
           return data.meta.codomain;
-        } else if (data.meta.kind == "struct") {
+        } else if (data.meta && data.meta.kind == "struct") {
           return data.meta.props[key];
-        } else if (data.meta.kind == "list") {
+        } else if (data.meta && data.meta.kind == "list") {
           return data.meta.type;
         } else {
-          // TODO possible situation?!
           return data[key];
         }
       }
