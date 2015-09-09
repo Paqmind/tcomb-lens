@@ -1,7 +1,7 @@
 {
   "name": "paqmind.tcomb-lens",
   "version": "0.1.0",
-  "description": "Data lens",
+  "description": "Data lens for Tcomb",
   "main": "lib/index.js",
   "scripts": {
     "eslint": "eslint src",
