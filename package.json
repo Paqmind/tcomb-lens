@@ -1,6 +1,6 @@
 {
   "name": "paqmind.tcomb-lens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Data lens for Tcomb",
   "main": "lib/index.js",
   "scripts": {
