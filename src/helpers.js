@@ -1,7 +1,13 @@
-import isPlainObject from "is-plain-object";
+function isArray(o) {
+  return toString.call(o) === '[object Array]';
+}
+
+function isPlainObject(o) {
+  return toString.call(o) === '[object Object]';
+}
 
 function isImmutable(data) {
-  let isNativeMutable = data instanceof Array || isPlainObject(data);
+  let isNativeMutable = isArray(data) || isPlainObject(data);
 
   let isTcombMutable = data.meta && (data.meta.kind == "dict" ||
                                      data.meta.kind == "list" ||
@@ -16,5 +22,5 @@ function isNumeric(n) {
 }
 
 export default {
-  isImmutable, isNumeric,
+  isArray, isPlainObject, isImmutable, isNumeric,
 };
